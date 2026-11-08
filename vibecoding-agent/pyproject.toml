@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vibecoding-agent"
+version = "0.1.0"
+description = "终端里的小游戏生成 Agent —— 用对话的方式制作可运行的小游戏"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+
+# 刻意不声明任何第三方依赖：整个项目只用 Python 标准库
+dependencies = []
+
+[project.scripts]
+vibe = "vibecoding_agent.cli:main"
+
+[tool.setuptools]
+packages = ["vibecoding_agent"]
